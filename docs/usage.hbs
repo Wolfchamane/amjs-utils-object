@@ -1,0 +1,20 @@
+## Usage
+
+#### dotProp
+
+```javascript
+const { dotProp } = require('@amjs/utils');
+
+const context = {
+    key : {
+        value : 'value'
+    }
+};
+
+// Interface: dotProp(ref = {}, prop = '', value = '')
+// Use two arguments in order to return a value
+console.log(dotProp(context, 'key.value')); // 'value'
+// Use additional 3rd argument to assign new value
+dotProp(context, 'key.value', 'foo');
+console.log(dotProp(context, 'key.value')); // 'foo'
+```
